@@ -1,0 +1,23 @@
+<launch>
+
+    <!-- 运行地图服务器，并且加载设置的地图-->
+    <!-- <include file="$(find robot_nav)/launch/map_server.launch"/> -->
+
+    <!-- 启动AMCL节点 -->
+    <include file="$(find sit_nav)/launch/amcl.launch" />
+
+    <!-- 运行move_base节点 -->
+    <include file="$(find sit_nav)/launch/move_base.launch" />
+
+    <!-- 发布laser->base_link的坐标系变换 -->
+    <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="laser_tf_publisher" 
+            args="0.19 0 0 0 0 0 base_link laser"/> -->
+
+    <!-- base_link->odom的坐标变换由里程计节点发布 -->
+
+    <!-- <include file="$(find sit_nav)/launch/velocity_smoother.launch"/> -->
+
+    <!-- 运行rviz -->
+    <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find robot_nav)/rviz/nav.rviz" /> -->
+
+</launch>
