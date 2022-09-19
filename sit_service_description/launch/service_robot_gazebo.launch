@@ -27,11 +27,11 @@
         name="spawn_urdf" 
         args="-urdf -model sit_service_robot -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
     <!-- 关节状态发布 -->
-    <!-- <node 
+    <node 
         name="joint_state_publisher" 
         pkg="joint_state_publisher" 
         type="joint_state_publisher" 
-        output="screen"/> -->
+        output="screen"/>
     <!-- 机器人状态发布节点 -->
     <node 
         name="robot_state_publisher" 
