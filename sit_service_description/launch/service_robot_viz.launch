@@ -19,11 +19,11 @@
         args="-d $(find sit_service_description)/config/service_robot_viz.rviz"
         output="screen"/>
     <!-- 关节状态发布节点 -->
-    <!-- <node 
+    <node 
         name="joint_state_publisher" 
         pkg="joint_state_publisher" 
         type="joint_state_publisher" 
-        output="screen"/> -->
+        output="screen"/>
     <!-- 机器人状态发布节点 -->
     <node 
         name="robot_state_publisher" 
